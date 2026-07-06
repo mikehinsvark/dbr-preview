@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dreams Business Resources | Find Hidden Profit. Reduce Costs. Unlock Growth.</title>
+<meta name="description" content="Dreams Business Resources helps business owners uncover overlooked savings, tax credits, funding options, benefit strategies, technology solutions, and growth opportunities through one complimentary DREAMS Score analysis.">
+<meta property="og:title" content="Dreams Business Resources — Your AI-Powered Business Profit & Savings Command Center">
+<meta property="og:description" content="Discover hidden tax credits, payroll savings, funding opportunities, group health solutions, technology upgrades, and growth strategies — all through one complimentary DREAMS Score analysis.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* ============ DBR DESIGN SYSTEM ============ */
+:root{
+  --midnight:#020817;
+  --navy:#071323;
+  --navy2:#0A1A30;
+  --cyan:#00D8FF;
+  --blue:#1677FF;
+  --green:#8CFF00;
+  --gold:#FFC83D;
+  --white:#F8FAFC;
+  --gray:#AAB4C3;
+  --line:rgba(0,216,255,.14);
+  --card:rgba(10,26,48,.72);
+  --font-head:'Sora',sans-serif;
+  --font-body:'Inter',sans-serif;
+  --font-label:'Orbitron',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font-body);
+  color:var(--white);
+  background:#000509;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(22,119,255,.10), transparent 60%),
+    linear-gradient(rgba(0,216,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,216,255,.025) 1px, transparent 1px);
+  background-size:100% 100%, 44px 44px, 44px 44px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+/* ---- BOXED FRAME (site sits inside a sharp glowing container, not edge-to-edge) ---- */
+.frame{
+  max-width:1240px;
+  margin:0 auto;
+  background:linear-gradient(180deg,var(--midnight) 0%,var(--navy) 55%,var(--midnight) 100%);
+  border-left:1px solid var(--line);
+  border-right:1px solid var(--line);
+  box-shadow:0 0 80px rgba(0,216,255,.07), 0 0 200px rgba(22,119,255,.05);
+  position:relative;
+  overflow-x:hidden;
+}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+section{padding:84px 0;position:relative}
+h1,h2,h3,h4{font-family:var(--font-head);line-height:1.15}
+a{color:var(--cyan);text-decoration:none}
+img{max-width:100%}
+
+/* ---- Section headers ---- */
+.sec-head{text-align:center;max-width:760px;margin:0 auto 52px}
+.sec-eyebrow{
+  font-family:var(--font-label);font-size:11px;letter-spacing:3px;text-transform:uppercase;
+  color:var(--cyan);display:inline-flex;align-items:center;gap:12px;margin-bottom:16px;
+}
+.sec-eyebrow::before,.sec-eyebrow::after{content:"";width:36px;height:1px;background:linear-gradient(90deg,transparent,var(--cyan))}
+.sec-eyebrow::after{background:linear-gradient(90deg,var(--cyan),transparent)}
+.sec-head h2{font-size:clamp(28px,4vw,42px);font-weight:800;letter-spacing:-.5px}
+.sec-head h2 span{background:linear-gradient(90deg,var(--cyan),var(--green));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.sec-head p{color:var(--gray);margin-top:14px;font-size:17px}
+
+/* ---- Buttons ---- */
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-head);font-weight:700;
+  font-size:15px;padding:15px 28px;border-radius:12px;transition:.25s;cursor:pointer;border:0;white-space:nowrap}
+.btn-primary{background:linear-gradient(135deg,#9DFF2E,var(--green));color:#06210A;
+  box-shadow:0 0 24px rgba(140,255,0,.35)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 34px rgba(140,255,0,.5)}
+.btn-ghost{background:rgba(0,216,255,.06);color:var(--cyan);border:1px solid rgba(0,216,255,.4)}
+.btn-ghost:hover{background:rgba(0,216,255,.14);transform:translateY(-2px)}
+.btn-gold{background:linear-gradient(135deg,#FFD76A,var(--gold));color:#231500;box-shadow:0 0 24px rgba(255,200,61,.3)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 6px 30px rgba(255,200,61,.5)}
+
+/* ---- Cards ---- */
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px;
+  backdrop-filter:blur(6px);transition:.3s;position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;inset:0 0 auto 0;height:2px;opacity:.9;
+  background:linear-gradient(90deg,transparent,var(--cyan),transparent)}
+.card:hover{transform:translateY(-4px);border-color:rgba(0,216,255,.4);box-shadow:0 14px 44px rgba(0,0,0,.5),0 0 30px rgba(0,216,255,.10)}
+.card.green::before{background:linear-gradient(90deg,transparent,var(--green),transparent)}
+.card.gold::before{background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.card.blue::before{background:linear-gradient(90deg,transparent,var(--blue),transparent)}
+.card.purple::before{background:linear-gradient(90deg,transparent,#B27BFF,transparent)}
+.card.coral::before{background:linear-gradient(90deg,transparent,#FF7B6B,transparent)}
+
+/* ---- Header / Nav ---- */
+header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(2,8,23,.86);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.nav{max-width:1120px;margin:0 auto;padding:0 28px;height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:12px;font-family:var(--font-head)}
+.logo-mark{width:42px;height:42px;flex:0 0 42px;filter:drop-shadow(0 0 8px rgba(0,216,255,.6))}
+.logo-text{font-size:15px;font-weight:800;letter-spacing:.5px;line-height:1.2;color:var(--white)}
+.logo-text b{color:var(--green);font-weight:800}
+.logo-text small{display:block;font-family:var(--font-label);font-size:8px;letter-spacing:3.5px;color:var(--gray);font-weight:500}
+.nav-links{display:flex;gap:30px;align-items:center;list-style:none}
+.nav-links a{color:var(--gray);font-size:14.5px;font-weight:500;transition:.2s}
+.nav-links a:hover{color:var(--cyan)}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.nav-cta .btn{padding:11px 20px;font-size:13.5px}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
+.hamburger span{width:24px;height:2px;background:var(--cyan);border-radius:2px;transition:.3s}
+.mobile-menu{display:none;flex-direction:column;gap:4px;padding:14px 28px 22px;border-top:1px solid var(--line);background:rgba(2,8,23,.97)}
+.mobile-menu a{padding:11px 4px;color:var(--gray);font-size:15px;border-bottom:1px solid rgba(0,216,255,.07)}
+.mobile-menu a:last-child{border:0}
+.mobile-menu.open{display:flex}
+
+/* ---- Reveal animation ---- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  *{animation:none!important}
+}
+
+/* ---- Scroll toggle button ---- */
+.scroll-toggle{
+  position:fixed;right:22px;bottom:26px;z-index:120;display:flex;flex-direction:column;gap:8px;
+}
+.scroll-toggle button{
+  width:48px;height:48px;border-radius:50%;cursor:pointer;font-size:18px;
+  background:rgba(7,19,35,.92);color:var(--cyan);border:1px solid rgba(0,216,255,.45);
+  box-shadow:0 0 18px rgba(0,216,255,.25);transition:.25s;backdrop-filter:blur(8px);
+}
+.scroll-toggle button:hover{background:rgba(0,216,255,.16);transform:scale(1.08)}
+
+/* ============ HERO ============ */
+.hero{padding:76px 0 30px;position:relative}
+.hero::before{content:"";position:absolute;top:-80px;left:50%;transform:translateX(-50%);
+  width:900px;height:500px;pointer-events:none;
+  background:radial-gradient(ellipse at center,rgba(0,216,255,.10),transparent 65%)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border-radius:100px;
+  background:rgba(0,216,255,.07);border:1px solid rgba(0,216,255,.3);
+  font-size:12.5px;font-weight:600;color:var(--cyan);margin-bottom:22px}
+.hero-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--green);
+  box-shadow:0 0 10px var(--green);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.hero h1{font-size:clamp(34px,4.6vw,56px);font-weight:800;letter-spacing:-1.2px;line-height:1.08}
+.hero h1 .l1{color:var(--white)}
+.hero h1 .l2{background:linear-gradient(90deg,var(--cyan),var(--blue));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero h1 .l3{background:linear-gradient(90deg,#9DFF2E,var(--green));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero-sub{color:var(--gray);font-size:17.5px;margin:22px 0 8px;max-width:540px}
+.hero-mini{color:var(--white);font-size:15px;font-weight:600;margin-bottom:28px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:14px}
+.hero-partner{font-size:13.5px;color:var(--gray);margin-bottom:30px}
+.hero-partner a{color:var(--gold);font-weight:600}
+.hero-partner a:hover{text-decoration:underline}
+.trust-strip{display:flex;flex-wrap:wrap;gap:10px 26px;padding-top:22px;border-top:1px solid var(--line)}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--gray);font-weight:500}
+.trust-item svg{flex:0 0 16px}
+
+/* ---- Dashboard visual ---- */
+.dash{position:relative;padding:10px 0}
+.dash-core{
+  background:linear-gradient(160deg,rgba(10,26,48,.95),rgba(4,12,26,.95));
+  border:1px solid rgba(0,216,255,.35);border-radius:22px;padding:28px 26px 24px;
+  box-shadow:0 0 60px rgba(0,216,255,.14),0 30px 80px rgba(0,0,0,.6);
+  position:relative;z-index:2;animation:float 6s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.dash-title{font-family:var(--font-label);font-size:12px;letter-spacing:4px;color:var(--cyan);
+  text-align:center;text-transform:uppercase;margin-bottom:4px}
+.dash-sub{font-size:11px;color:var(--gray);text-align:center;letter-spacing:1px;margin-bottom:14px}
+.gauge-wrap{display:flex;justify-content:center;margin-bottom:6px}
+.gauge{position:relative;width:190px;height:120px}
+.gauge svg{width:100%;height:auto;overflow:visible}
+.gauge-num{position:absolute;left:0;right:0;top:52px;text-align:center;
+  font-family:var(--font-head);font-size:44px;font-weight:800;color:var(--white);
+  text-shadow:0 0 24px rgba(140,255,0,.5)}
+.gauge-label{position:absolute;left:0;right:0;top:102px;text-align:center;
+  font-family:var(--font-label);font-size:10px;letter-spacing:3px;color:var(--green)}
+.dash-value{text-align:center;border:1px solid rgba(140,255,0,.3);background:rgba(140,255,0,.05);
+  border-radius:12px;padding:10px 14px;margin:16px 0 18px}
+.dash-value .v-label{font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:var(--gray)}
+.dash-value .v-num{font-family:var(--font-head);font-size:26px;font-weight:800;color:var(--green);
+  text-shadow:0 0 18px rgba(140,255,0,.4)}
+.dash-value .v-note{font-size:10.5px;color:var(--gray)}
+.mods{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.mod{display:flex;align-items:center;gap:9px;padding:9px 11px;border-radius:10px;
+  background:rgba(0,216,255,.04);border:1px solid rgba(0,216,255,.16);transition:.25s}
+.mod:hover{border-color:rgba(0,216,255,.5);background:rgba(0,216,255,.09)}
+.mod-letter{font-family:var(--font-label);font-weight:700;font-size:13px;width:24px;height:24px;flex:0 0 24px;
+  display:flex;align-items:center;justify-content:center;border-radius:7px}
+.mod span{font-size:11.5px;font-weight:600;color:var(--white);line-height:1.25}
+.m-d .mod-letter{background:rgba(22,119,255,.18);color:#6FA8FF;border:1px solid rgba(22,119,255,.5)}
+.m-r .mod-letter{background:rgba(178,123,255,.14);color:#B27BFF;border:1px solid rgba(178,123,255,.5)}
+.m-e .mod-letter{background:rgba(255,200,61,.12);color:var(--gold);border:1px solid rgba(255,200,61,.5)}
+.m-a .mod-letter{background:rgba(0,216,255,.12);color:var(--cyan);border:1px solid rgba(0,216,255,.5)}
+.m-m .mod-letter{background:rgba(140,255,0,.1);color:var(--green);border:1px solid rgba(140,255,0,.5)}
+.m-s .mod-letter{background:rgba(255,123,107,.12);color:#FF7B6B;border:1px solid rgba(255,123,107,.5)}
+.float-chip{position:absolute;z-index:3;padding:8px 14px;border-radius:100px;font-size:11.5px;font-weight:700;
+  background:rgba(7,19,35,.92);border:1px solid rgba(0,216,255,.4);color:var(--cyan);
+  box-shadow:0 8px 24px rgba(0,0,0,.5),0 0 16px rgba(0,216,255,.15);
+  backdrop-filter:blur(6px);animation:float 7s ease-in-out infinite;white-space:nowrap}
+.float-chip.gold{color:var(--gold);border-color:rgba(255,200,61,.45);box-shadow:0 8px 24px rgba(0,0,0,.5),0 0 16px rgba(255,200,61,.15)}
+.float-chip.green{color:var(--green);border-color:rgba(140,255,0,.45);box-shadow:0 8px 24px rgba(0,0,0,.5),0 0 16px rgba(140,255,0,.15)}
+.fc1{top:-8px;left:-16px;animation-delay:.6s}
+.fc2{top:34%;right:-22px;animation-delay:1.4s}
+.fc3{bottom:12%;left:-26px;animation-delay:2.1s}
+.fc4{bottom:-12px;right:8%;animation-delay:2.8s}
+
+/* ============ CAROUSEL ============ */
+.carousel-sec{padding:56px 0 84px}
+.carousel{position:relative}
+.car-track-wrap{overflow:hidden;border-radius:20px}
+.car-track{display:flex;transition:transform .55s cubic-bezier(.4,0,.2,1)}
+.slide{flex:0 0 100%;min-width:100%;padding:2px}
+.slide-inner{
+  display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;
+  background:linear-gradient(150deg,rgba(10,26,48,.9),rgba(4,12,26,.92));
+  border:1px solid var(--line);border-radius:20px;padding:44px 48px;min-height:320px}
+.slide-tag{display:inline-block;font-family:var(--font-label);font-size:10.5px;letter-spacing:3px;
+  text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:16px}
+.slide h3{font-size:clamp(22px,2.6vw,30px);font-weight:800;letter-spacing:-.4px;margin-bottom:12px}
+.slide p{color:var(--gray);font-size:15.5px;margin-bottom:22px;max-width:460px}
+.slide .btn{padding:12px 22px;font-size:14px}
+.slide-visual{display:flex;align-items:center;justify-content:center}
+.slide-icon{
+  width:150px;height:150px;border-radius:26px;display:flex;align-items:center;justify-content:center;
+  font-size:64px;position:relative}
+.slide-icon::before{content:"";position:absolute;inset:0;border-radius:26px;border:1px solid;opacity:.55}
+.slide-icon::after{content:"";position:absolute;inset:-20px;border-radius:40px;border:1px dashed;opacity:.18;animation:spin 22s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.si-cyan{background:rgba(0,216,255,.06);box-shadow:0 0 60px rgba(0,216,255,.18)}
+.si-cyan::before,.si-cyan::after{border-color:var(--cyan)}
+.si-gold{background:rgba(255,200,61,.06);box-shadow:0 0 60px rgba(255,200,61,.16)}
+.si-gold::before,.si-gold::after{border-color:var(--gold)}
+.si-green{background:rgba(140,255,0,.05);box-shadow:0 0 60px rgba(140,255,0,.14)}
+.si-green::before,.si-green::after{border-color:var(--green)}
+.si-blue{background:rgba(22,119,255,.08);box-shadow:0 0 60px rgba(22,119,255,.2)}
+.si-blue::before,.si-blue::after{border-color:var(--blue)}
+.si-purple{background:rgba(178,123,255,.07);box-shadow:0 0 60px rgba(178,123,255,.16)}
+.si-purple::before,.si-purple::after{border-color:#B27BFF}
+.si-coral{background:rgba(255,123,107,.07);box-shadow:0 0 60px rgba(255,123,107,.16)}
+.si-coral::before,.si-coral::after{border-color:#FF7B6B}
+.t-cyan{color:var(--cyan);background:rgba(0,216,255,.08);border:1px solid rgba(0,216,255,.35)}
+.t-gold{color:var(--gold);background:rgba(255,200,61,.08);border:1px solid rgba(255,200,61,.35)}
+.t-green{color:var(--green);background:rgba(140,255,0,.07);border:1px solid rgba(140,255,0,.35)}
+.t-blue{color:#6FA8FF;background:rgba(22,119,255,.1);border:1px solid rgba(22,119,255,.4)}
+.t-purple{color:#B27BFF;background:rgba(178,123,255,.09);border:1px solid rgba(178,123,255,.38)}
+.t-coral{color:#FF7B6B;background:rgba(255,123,107,.09);border:1px solid rgba(255,123,107,.38)}
+.car-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:5;
+  width:46px;height:46px;border-radius:50%;border:1px solid rgba(0,216,255,.4);cursor:pointer;
+  background:rgba(7,19,35,.9);color:var(--cyan);font-size:18px;transition:.25s;backdrop-filter:blur(6px)}
+.car-nav:hover{background:rgba(0,216,255,.15);transform:translateY(-50%) scale(1.07)}
+.car-prev{left:-14px}
+.car-next{right:-14px}
+.car-dots{display:flex;justify-content:center;gap:9px;margin-top:22px}
+.car-dot{width:9px;height:9px;border-radius:50%;background:rgba(170,180,195,.28);border:0;cursor:pointer;transition:.3s;padding:0}
+.car-dot.active{background:var(--cyan);box-shadow:0 0 10px var(--cyan);width:26px;border-radius:100px}
+
+/* ============ SAMPLE REPORT / OPPORTUNITY AREAS ============ */
+.report-totals{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:34px}
+.total-card{text-align:center;padding:22px 16px;border-radius:16px;border:1px solid var(--line);
+  background:var(--card)}
+.total-card .t-num{font-family:var(--font-head);font-size:clamp(22px,2.8vw,32px);font-weight:800}
+.total-card .t-label{font-size:12.5px;color:var(--gray);margin-top:4px}
+.tc-cyan .t-num{color:var(--cyan);text-shadow:0 0 20px rgba(0,216,255,.4)}
+.tc-green .t-num{color:var(--green);text-shadow:0 0 20px rgba(140,255,0,.35)}
+.tc-gold .t-num{color:var(--gold);text-shadow:0 0 20px rgba(255,200,61,.35)}
+.areas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.area-card{padding:24px}
+.area-top{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.area-letter{font-family:var(--font-label);font-weight:700;font-size:17px;width:40px;height:40px;flex:0 0 40px;
+  display:flex;align-items:center;justify-content:center;border-radius:11px}
+.area-card h3{font-size:16.5px;font-weight:700;line-height:1.3}
+.area-amt{font-family:var(--font-head);font-size:21px;font-weight:800;margin-bottom:8px}
+.area-card p{font-size:13.5px;color:var(--gray)}
+.al-d{background:rgba(22,119,255,.16);color:#6FA8FF;border:1px solid rgba(22,119,255,.5)}
+.al-r{background:rgba(178,123,255,.13);color:#B27BFF;border:1px solid rgba(178,123,255,.5)}
+.al-e{background:rgba(255,200,61,.11);color:var(--gold);border:1px solid rgba(255,200,61,.5)}
+.al-a{background:rgba(0,216,255,.11);color:var(--cyan);border:1px solid rgba(0,216,255,.5)}
+.al-m{background:rgba(140,255,0,.09);color:var(--green);border:1px solid rgba(140,255,0,.5)}
+.al-s{background:rgba(255,123,107,.11);color:#FF7B6B;border:1px solid rgba(255,123,107,.5)}
+.amt-blue{color:#6FA8FF}.amt-purple{color:#B27BFF}.amt-gold{color:var(--gold)}
+.amt-cyan{color:var(--cyan)}.amt-green{color:var(--green)}.amt-coral{color:#FF7B6B}
+.report-note{text-align:center;color:var(--gray);font-size:12.5px;margin-top:22px}
+
+/* ============ HOW IT WORKS ============ */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:step}
+.step{padding:26px 22px;text-align:left}
+.step-num{font-family:var(--font-label);font-size:13px;font-weight:700;letter-spacing:2px;
+  width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.s1 .step-num{background:rgba(0,216,255,.1);color:var(--cyan);border:1px solid rgba(0,216,255,.5)}
+.s2 .step-num{background:rgba(22,119,255,.14);color:#6FA8FF;border:1px solid rgba(22,119,255,.5)}
+.s3 .step-num{background:rgba(140,255,0,.08);color:var(--green);border:1px solid rgba(140,255,0,.5)}
+.s4 .step-num{background:rgba(255,200,61,.1);color:var(--gold);border:1px solid rgba(255,200,61,.5)}
+.step h3{font-size:17px;font-weight:700;margin-bottom:8px}
+.step p{font-size:13.5px;color:var(--gray)}
+
+/* ============ AUDIENCE SPLIT ============ */
+.aud-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.aud-card{padding:36px 32px}
+.aud-tag{display:inline-block;font-family:var(--font-label);font-size:10.5px;letter-spacing:3px;
+  text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:18px}
+.aud-card h3{font-size:24px;font-weight:800;margin-bottom:10px}
+.aud-card>p{color:var(--gray);font-size:15px;margin-bottom:20px}
+.aud-list{list-style:none;margin-bottom:26px}
+.aud-list li{display:flex;gap:10px;align-items:flex-start;padding:7px 0;font-size:14.5px;color:var(--white)}
+.aud-list .tick{flex:0 0 18px;margin-top:3px}
+
+/* ============ STATS BAND ============ */
+.stats-band{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;text-align:center}
+.stat .st-num{font-family:var(--font-head);font-size:clamp(30px,4vw,44px);font-weight:800;
+  background:linear-gradient(120deg,var(--cyan),var(--green));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.stat .st-label{font-size:13px;color:var(--gray);letter-spacing:.5px;margin-top:2px}
+
+/* ============ FAQ ============ */
+.faq-list{max-width:760px;margin:0 auto}
+.faq-item{border:1px solid var(--line);border-radius:14px;background:var(--card);margin-bottom:12px;overflow:hidden;transition:.3s}
+.faq-item.open{border-color:rgba(0,216,255,.45)}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;
+  background:none;border:0;cursor:pointer;padding:19px 22px;text-align:left;
+  font-family:var(--font-head);font-size:16px;font-weight:700;color:var(--white)}
+.faq-q .chev{color:var(--cyan);font-size:20px;transition:.3s;flex:0 0 auto}
+.faq-item.open .chev{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a p{padding:0 22px 20px;color:var(--gray);font-size:14.5px}
+
+/* ============ FINAL CTA ============ */
+.final-cta{
+  text-align:center;border:1px solid rgba(140,255,0,.3);border-radius:24px;
+  padding:60px 40px;position:relative;overflow:hidden;
+  background:
+    radial-gradient(ellipse 60% 90% at 50% 0%, rgba(140,255,0,.08), transparent 70%),
+    linear-gradient(160deg,rgba(10,26,48,.95),rgba(4,12,26,.95));
+}
+.final-cta .fc-icon{font-size:40px;margin-bottom:14px}
+.final-cta h2{font-size:clamp(24px,3.4vw,36px);font-weight:800;max-width:760px;margin:0 auto 14px;letter-spacing:-.5px}
+.final-cta h2 span{color:var(--green)}
+.final-cta p{color:var(--gray);max-width:600px;margin:0 auto 30px;font-size:16px}
+.final-fine{margin-top:22px;font-size:12.5px;color:var(--gray)}
+
+/* ============ FOOTER ============ */
+footer{border-top:1px solid var(--line);padding:52px 0 34px;background:rgba(2,8,23,.6)}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:38px}
+.foot-brand p{color:var(--gray);font-size:13.5px;margin-top:14px;max-width:320px}
+.foot-col h4{font-family:var(--font-label);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);margin-bottom:16px}
+.foot-col a{display:block;color:var(--gray);font-size:14px;padding:5px 0;transition:.2s}
+.foot-col a:hover{color:var(--cyan)}
+.foot-bottom{border-top:1px solid rgba(0,216,255,.08);padding-top:22px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12.5px;color:var(--gray)}
+
+/* ---- Sections responsive ---- */
+@media(max-width:960px){
+  .areas-grid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .aud-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  .report-totals{grid-template-columns:1fr}
+  .areas-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .stats-band{grid-template-columns:1fr 1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .final-cta{padding:44px 22px}
+}
+
+/* ---- Hero/carousel responsive ---- */
+@media(max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:44px}
+  .dash{max-width:440px;margin:0 auto}
+  .slide-inner{grid-template-columns:1fr;padding:34px 28px;gap:24px;text-align:center}
+  .slide p{margin-left:auto;margin-right:auto}
+  .car-prev{left:-6px}.car-next{right:-6px}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+}
+@media(max-width:560px){
+  section{padding:60px 0}
+  .wrap{padding:0 18px}
+  .hero{padding-top:48px}
+  .hero-cta .btn{width:100%;justify-content:center}
+  .float-chip{display:none}
+  .slide-icon{width:110px;height:110px;font-size:46px}
+  .nav-cta .btn{padding:10px 14px;font-size:12.5px}
+  .logo-text{font-size:13px}
+  .scroll-toggle{right:14px;bottom:18px}
+  .scroll-toggle button{width:42px;height:42px}
+}
+</style>
+</head>
+<body>
+<div class="frame">
+
+<!-- ================= HEADER ================= -->
+<header>
+  <nav class="nav">
+    <a href="#top" class="logo" aria-label="Dreams Business Resources home">
+      <svg class="logo-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24 3 6 10v13c0 11.5 7.7 19.6 18 22 10.3-2.4 18-10.5 18-22V10L24 3Z" stroke="#00D8FF" stroke-width="2.4" fill="rgba(0,216,255,.07)"/>
+        <path d="M26.5 12 17 26h6l-2 10 9.5-14h-6l2-10Z" fill="#00D8FF"/>
+      </svg>
+      <span class="logo-text">DREAMS <b>BUSINESS</b><small>RESOURCES</small></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#score">DREAMS Score</a></li>
+      <li><a href="#solutions">Solutions</a></li>
+      <li><a href="#how">How It Works</a></li>
+      <li><a href="#partners">Partners</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://dreamsscores.com/?refid=AA0233" target="_blank" rel="noopener">Get Your Score</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#score">DREAMS Score</a>
+    <a href="#solutions">Solutions</a>
+    <a href="#how">How It Works</a>
+    <a href="#partners">Partners</a>
+    <a href="#faq">FAQ</a>
+    <a href="https://dreamsscores.com/?refid=AA0233" target="_blank" rel="noopener" style="color:var(--green);font-weight:700">Get Your Score →</a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge"><span class="dot"></span>For Business Owners, Executives, Advisors &amp; Referral Partners</div>
+        <h1>
+          <span class="l1">Find Hidden Profit.</span><br>
+          <span class="l2">Reduce Costs.</span><br>
+          <span class="l3">Unlock Growth.</span>
+        </h1>
+        <p class="hero-sub">Dreams Business Resources helps business owners uncover overlooked savings, tax credits, funding options, benefit strategies, technology solutions, and growth opportunities — through one complimentary DREAMS Score analysis.</p>
+        <p class="hero-mini">No pressure. No guesswork. Just a smarter way to see what your business may be missing.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="https://dreamsscores.com/?refid=AA0233" target="_blank" rel="noopener">Get My Complimentary DREAMS Score →</a>
+          <a class="btn btn-ghost" href="#solutions">Explore the DBR Ecosystem</a>
+        </div>
+        <p class="hero-partner">Know business owners? <a href="#partners">Become a DBR Partner →</a></p>
+        <div class="trust-strip">
+          <div class="trust-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#8CFF00" stroke-width="1.5"/><path d="m5 8 2 2 4-4" stroke="#8CFF00" stroke-width="1.5" stroke-linecap="round"/></svg>100% Complimentary</div>
+          <div class="trust-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#00D8FF" stroke-width="1.5"/><path d="M8 4.5V8l2.5 1.5" stroke="#00D8FF" stroke-width="1.5" stroke-linecap="round"/></svg>15-Minute Analysis</div>
+          <div class="trust-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1.5 2 4v3.5c0 3.8 2.6 6.5 6 7.5 3.4-1 6-3.7 6-7.5V4L8 1.5Z" stroke="#FFC83D" stroke-width="1.5"/></svg>No Sensitive Financials Needed</div>
+          <div class="trust-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="5.5" cy="5.5" r="2.5" stroke="#6FA8FF" stroke-width="1.5"/><circle cx="11" cy="6.5" r="2" stroke="#6FA8FF" stroke-width="1.5"/><path d="M1.5 13c.5-2 2-3.5 4-3.5s3.5 1.5 4 3.5M9.5 10c1.8.2 3.5 1.3 4 3" stroke="#6FA8FF" stroke-width="1.5" stroke-linecap="round"/></svg>Expert-Guided</div>
+        </div>
+      </div>
+
+      <!-- DREAMS Score dashboard visual -->
+      <div class="dash">
+        <div class="float-chip fc1">💰 Tax Credits</div>
+        <div class="float-chip gold fc2">🏦 Funding</div>
+        <div class="float-chip green fc3">❤️ Group Health</div>
+        <div class="float-chip fc4">🤖 AI &amp; Technology</div>
+        <div class="dash-core">
+          <div class="dash-title">Dreams Score</div>
+          <div class="dash-sub">AI-Powered Business Intelligence Report</div>
+          <div class="gauge-wrap">
+            <div class="gauge">
+              <svg viewBox="0 0 190 110">
+                <defs>
+                  <linearGradient id="gaugeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#00D8FF"/>
+                    <stop offset="60%" stop-color="#1677FF"/>
+                    <stop offset="100%" stop-color="#8CFF00"/>
+                  </linearGradient>
+                </defs>
+                <path d="M 15 105 A 80 80 0 0 1 175 105" fill="none" stroke="rgba(170,180,195,.15)" stroke-width="12" stroke-linecap="round"/>
+                <path d="M 15 105 A 80 80 0 0 1 175 105" fill="none" stroke="url(#gaugeGrad)" stroke-width="12" stroke-linecap="round"
+                  stroke-dasharray="251.2" stroke-dashoffset="20" id="gaugeArc"/>
+              </svg>
+              <div class="gauge-num" id="gaugeNum">92</div>
+              <div class="gauge-label">Excellent</div>
+            </div>
+          </div>
+          <div class="dash-value">
+            <div class="v-label">Total Value Opportunity</div>
+            <div class="v-num" id="valueNum">$1,764,800</div>
+            <div class="v-note">Annual Impact Potential · Sample Report</div>
+          </div>
+          <div class="mods">
+            <div class="mod m-d"><span class="mod-letter">D</span><span>Debt &amp; Funding</span></div>
+            <div class="mod m-r"><span class="mod-letter">R</span><span>Retirement &amp; Planning</span></div>
+            <div class="mod m-e"><span class="mod-letter">E</span><span>Expense Reduction</span></div>
+            <div class="mod m-a"><span class="mod-letter">A</span><span>Asset Optimization</span></div>
+            <div class="mod m-m"><span class="mod-letter">M</span><span>Money &amp; Tax Credits</span></div>
+            <div class="mod m-s"><span class="mod-letter">S</span><span>Security &amp; Protection</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ECOSYSTEM CAROUSEL ================= -->
+<section class="carousel-sec" id="solutions" aria-label="DBR ecosystem carousel">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-eyebrow">The DBR Ecosystem</div>
+      <h2>One Ecosystem. <span>Multiple Ways to Create Value.</span></h2>
+    </div>
+    <div class="carousel reveal" id="carousel">
+      <div class="car-track-wrap">
+        <div class="car-track" id="carTrack">
+
+          <div class="slide">
+            <div class="slide-inner">
+              <div>
+                <span class="slide-tag t-cyan">DREAMS Score</span>
+                <h3>Find the Money Hiding in Your Business</h3>
+                <p>A complimentary 15-minute analysis across savings, tax credits, funding, benefits, technology, and risk — delivered as one clear, customized report.</p>
+                <a class="btn btn-primary" href="https://dreamsscores.com/?refid=AA0233" target="_blank" rel="noopener">Get My Score →</a>
+              </div>
+              <div class="slide-visual"><div class="slide-icon si-cyan">📊</div></div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="slide-inner">
+              <div>
+                <span class="slide-tag t-gold">Tax Credits &amp; Payroll Savings</span>
+                <h3>Tax Credits Most Businesses Miss</h3>
+                <p>R&amp;D tax credits, FICA tip credits, WOTC, and payroll-related savings strategies that put real money back into the business.</p>
+                <a class="btn btn-gold" href="https://dreamsscores.com/?refid=AA0233" target="_blank" rel="noopener">Explore Tax Savings →</a>
+              </div>
+              <div class="slide-visual"><div class="slide-icon si-gold">💰</div></div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="slide-inner">
+              <div>
+                <span class="slide-tag t-green">Group Health &amp; Benefits</span>
+                <h3>Reduce Costs. Improve Benefits. Protect Employees.</h3>
+                <p>Group health strategies, Section 125 opportunities, connected care, and wellness-focused solutions that lower costs while strengthening teams.</p>
+                <a class="btn btn-primary" href="https://dreamsscores.com/?refid=AA0233" target="_blank" rel="noopener">Review Benefits Options →</a>
+              </div>
+              <div class="slide-visual"><div class="slide-icon si-green">❤️</div></div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="slide-inner">
+              <div>
+                <span class="slide-tag t-blue">Funding &amp; Working Capital</span>
+                <h3>Capital Access Without the Confusion</h3>
+                <p>Working capital, SBA-style lending, equipment financing, debt restructuring, and strategic capital solutions to fuel growth.</p>
+                <a class="btn btn-ghost" href="https://dreamsscores.com/?refid=AA0233" target="_blank" rel="noopener">Explore Funding →</a>
+              </div>
+              <div class="slide-visual"><div class="slide-icon si-blue">🏦</div></div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="slide-inner">
+              <div>
+                <span class="slide-tag t-purple">AI, Technology &amp; Automation</span>
+                <h3>Upgrade the Operating System of Your Business</h3>
+                <p>AI tools, CRM systems, cybersecurity, cloud and telecom, automation, and a technology marketplace with 220+ solutions.</p>
+                <a class="btn btn-ghost" href="https://dreamsscores.com/?refid=AA0233" target="_blank" rel="noopener">Explore Technology →</a>
+              </div>
+              <div class="slide-visual"><div class="slide-icon si-purple">🤖</div></div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="slide-inner">
+              <div>
+                <span class="slide-tag t-coral">Partner Opportunity</span>
+                <h3>One Relationship. Multiple Revenue Streams.</h3>
+                <p>Introduce business owners to DBR solutions while our experts handle the analysis, strategy, and implementation — and earn ongoing income.</p>
+                <a class="btn btn-gold" href="https://dreamsresources.com/join" target="_blank" rel="noopener">Become a Partner →</a>
+              </div>
+              <div class="slide-visual"><div class="slide-icon si-coral">🤝</div></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <button class="car-nav car-prev" id="carPrev" aria-label="Previous slide">‹</button>
+      <button class="car-nav car-next" id="carNext" aria-label="Next slide">›</button>
+      <div class="car-dots" id="carDots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DREAMS SCORE / SAMPLE REPORT ================= -->
+<section id="score">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-eyebrow">The DREAMS Score</div>
+      <h2>Six Areas. One Report. <span>Real Dollars.</span></h2>
+      <p>In just 15 minutes, the DREAMS Score identifies overlooked opportunities — often missed by CPAs and traditional advisors — across six key areas of your business. Here's what one sample report uncovered:</p>
+    </div>
+    <div class="report-totals reveal">
+      <div class="total-card tc-cyan"><div class="t-num">$1,026,050</div><div class="t-label">Total Est. Annual Savings</div></div>
+      <div class="total-card tc-green"><div class="t-num">$1,464,000</div><div class="t-label">Total Est. Increased Profit</div></div>
+      <div class="total-card tc-gold"><div class="t-num">$2,490,050</div><div class="t-label">Total Potential Value</div></div>
+    </div>
+    <div class="areas-grid">
+      <div class="card blue area-card reveal">
+        <div class="area-top"><span class="area-letter al-d">D</span><h3>Debt &amp; Corporate Funding</h3></div>
+        <div class="area-amt amt-blue">$300,000+</div>
+        <p>Reduce or restructure debt — or access fast, flexible funding when your business needs it most.</p>
+      </div>
+      <div class="card purple area-card reveal">
+        <div class="area-top"><span class="area-letter al-r">R</span><h3>Retirement &amp; Planning</h3></div>
+        <div class="area-amt amt-purple">$63,750+</div>
+        <p>Build smarter benefits with 401(k)s, IRAs, or key-person life insurance — while reducing taxable income.</p>
+      </div>
+      <div class="card gold area-card reveal">
+        <div class="area-top"><span class="area-letter al-e">E</span><h3>Expense Reduction</h3></div>
+        <div class="area-amt amt-gold">$297,800+</div>
+        <p>Cut energy, healthcare, and payroll costs without sacrificing quality or compliance.</p>
+      </div>
+      <div class="card area-card reveal">
+        <div class="area-top"><span class="area-letter al-a">A</span><h3>Asset Optimization</h3></div>
+        <div class="area-amt amt-cyan">$1,164,000+</div>
+        <p>Protect, optimize, and grow your business assets to increase long-term value and efficiency.</p>
+      </div>
+      <div class="card green area-card reveal">
+        <div class="area-top"><span class="area-letter al-m">M</span><h3>Money &amp; Tax Credits</h3></div>
+        <div class="area-amt amt-green">$595,000+</div>
+        <p>Improve cash flow and unlock powerful credits like R&amp;D, FICA tip, and WOTC to reinvest in your business.</p>
+      </div>
+      <div class="card coral area-card reveal">
+        <div class="area-top"><span class="area-letter al-s">S</span><h3>Security &amp; Protection</h3></div>
+        <div class="area-amt amt-coral">$69,500+</div>
+        <p>Strengthen cybersecurity, compliance, insurance, and risk management to protect your operations.</p>
+      </div>
+    </div>
+    <p class="report-note">Sample figures from an actual DREAMS Score report for an 85-employee manufacturing company. Every business is different — your results will vary.</p>
+  </div>
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+<section id="how">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-eyebrow">Our Process</div>
+      <h2>Your DREAMS Report in <span>Three Simple Steps</span></h2>
+    </div>
+    <div class="steps">
+      <div class="card step s1 reveal">
+        <div class="step-num">01</div>
+        <h3>Schedule Your Call</h3>
+        <p>Book a free 15-minute DREAMS Score consultation. No tax returns, bank statements, or personal financials required.</p>
+      </div>
+      <div class="card blue step s2 reveal">
+        <div class="step-num">02</div>
+        <h3>Meet a DREAMS Expert</h3>
+        <p>A dedicated expert walks through each of the six DREAMS areas and evaluates your unique business needs.</p>
+      </div>
+      <div class="card green step s3 reveal">
+        <div class="step-num">03</div>
+        <h3>Receive Your Report</h3>
+        <p>Get a personalized report outlining potential savings, growth strategies, and clear next steps.</p>
+      </div>
+      <div class="card gold step s4 reveal">
+        <div class="step-num">04</div>
+        <h3>Connect With Experts</h3>
+        <p>If we find opportunities, we connect you with the right specialists — only if you want to move forward.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AUDIENCE SPLIT ================= -->
+<section id="partners">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-eyebrow">Who We Help</div>
+      <h2>Built for Owners. <span>Built for Partners.</span></h2>
+    </div>
+    <div class="aud-grid">
+      <div class="card aud-card reveal">
+        <span class="aud-tag t-cyan">For Business Owners</span>
+        <h3>Keep More of What You Earn</h3>
+        <p>Most owners come in with one concern — funding, taxes, or rising costs — and uncover multiple areas where they're overspending or missing out.</p>
+        <ul class="aud-list">
+          <li><svg class="tick" width="18" height="18" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#00D8FF" stroke-width="1.5"/><path d="m5 8 2 2 4-4" stroke="#00D8FF" stroke-width="1.5" stroke-linecap="round"/></svg>Reduce operating costs without cutting quality</li>
+          <li><svg class="tick" width="18" height="18" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#00D8FF" stroke-width="1.5"/><path d="m5 8 2 2 4-4" stroke="#00D8FF" stroke-width="1.5" stroke-linecap="round"/></svg>Recover tax credits you already qualify for</li>
+          <li><svg class="tick" width="18" height="18" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#00D8FF" stroke-width="1.5"/><path d="m5 8 2 2 4-4" stroke="#00D8FF" stroke-width="1.5" stroke-linecap="round"/></svg>Access capital to grow with confidence</li>
+          <li><svg class="tick" width="18" height="18" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#00D8FF" stroke-width="1.5"/><path d="m5 8 2 2 4-4" stroke="#00D8FF" stroke-width="1.5" stroke-linecap="round"/></svg>Protect the company you've built</li>
+        </ul>
+        <a class="btn btn-primary" href="https://dreamsscores.com/?refid=AA0233" target="_blank" rel="noopener">Get My Complimentary Score →</a>
+      </div>
+      <div class="card gold aud-card reveal">
+        <span class="aud-tag t-gold">For Referral Partners</span>
+        <h3>One Relationship. Multiple Revenue Streams.</h3>
+        <p>You make thoughtful introductions. DBR experts handle the analysis, presentations, and implementation — and you earn ongoing income.</p>
+        <ul class="aud-list">
+          <li><svg class="tick" width="18" height="18" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#FFC83D" stroke-width="1.5"/><path d="m5 8 2 2 4-4" stroke="#FFC83D" stroke-width="1.5" stroke-linecap="round"/></svg>No selling, negotiating, or implementation</li>
+          <li><svg class="tick" width="18" height="18" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#FFC83D" stroke-width="1.5"/><path d="m5 8 2 2 4-4" stroke="#FFC83D" stroke-width="1.5" stroke-linecap="round"/></svg>Recurring income on group sales renewals</li>
+          <li><svg class="tick" width="18" height="18" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#FFC83D" stroke-width="1.5"/><path d="m5 8 2 2 4-4" stroke="#FFC83D" stroke-width="1.5" stroke-linecap="round"/></svg>Training, tools, and expert support included</li>
+          <li><svg class="tick" width="18" height="18" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#FFC83D" stroke-width="1.5"/><path d="m5 8 2 2 4-4" stroke="#FFC83D" stroke-width="1.5" stroke-linecap="round"/></svg>A full ecosystem of solutions to offer</li>
+        </ul>
+        <a class="btn btn-gold" href="https://dreamsresources.com/join" target="_blank" rel="noopener">Become a DBR Partner →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STATS BAND ================= -->
+<section style="padding:56px 0">
+  <div class="wrap">
+    <div class="stats-band reveal">
+      <div class="stat"><div class="st-num" data-count="2245">0</div><div class="st-label">Happy Clients</div></div>
+      <div class="stat"><div class="st-num" data-count="3452">0</div><div class="st-label">SCOREs Completed</div></div>
+      <div class="stat"><div class="st-num" data-count="25">0</div><div class="st-label">Years of Experience</div></div>
+      <div class="stat"><div class="st-num" data-count="2000">0</div><div class="st-label">Professional Team</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section id="faq" style="padding-top:40px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-eyebrow">Trust &amp; Transparency</div>
+      <h2>Frequently Asked <span>Questions</span></h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q">Is there a cost?<span class="chev">+</span></button>
+        <div class="faq-a"><p>Nope! It's 100% free. No hidden fees, no obligations.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do I have to provide detailed business or personal info?<span class="chev">+</span></button>
+        <div class="faq-a"><p>No. We just ask basic business questions — no tax returns, bank statements, or personal financial details required.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What's the catch?<span class="chev">+</span></button>
+        <div class="faq-a"><p>There isn't one. If we find savings, we'll connect you with an expert who can help — only if you want to move forward.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What happens after the DREAMS Score analysis?<span class="chev">+</span></button>
+        <div class="faq-a"><p>You'll receive a custom report showing potential savings and profit-boosting strategies. If you're interested, we can connect you with an expert to help — but there's no obligation.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section style="padding-top:20px">
+  <div class="wrap">
+    <div class="final-cta reveal">
+      <div class="fc-icon">⏱️</div>
+      <h2>Would you be opposed to a complimentary <span>15-minute DREAMS Score</span> analysis?</h2>
+      <p>Discover hidden profit, tax savings, funding opportunities, and growth potential in one AI-powered report. Is your business leaving $50,000–$500,000 on the table every year?</p>
+      <a class="btn btn-primary" href="https://dreamsscores.com/?refid=AA0233" target="_blank" rel="noopener" style="font-size:16.5px;padding:17px 34px">Get My DREAMS Score Analysis Now →</a>
+      <div class="final-fine">100% Complimentary · No Obligation · No Pressure · Expert Guided</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#top" class="logo">
+          <svg class="logo-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 3 6 10v13c0 11.5 7.7 19.6 18 22 10.3-2.4 18-10.5 18-22V10L24 3Z" stroke="#00D8FF" stroke-width="2.4" fill="rgba(0,216,255,.07)"/>
+            <path d="M26.5 12 17 26h6l-2 10 9.5-14h-6l2-10Z" fill="#00D8FF"/>
+          </svg>
+          <span class="logo-text">DREAMS <b>BUSINESS</b><small>RESOURCES</small></span>
+        </a>
+        <p>One relationship. Multiple solutions. Built to help businesses save, grow, and move smarter.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <a href="#score">DREAMS Score</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#how">How It Works</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="foot-col">
+        <h4>Ecosystem</h4>
+        <a href="https://dreamsscores.com/?refid=AA0233" target="_blank" rel="noopener">Get Your Score</a>
+        <a href="https://renewalsforlife.com" target="_blank" rel="noopener">Renewals For Life</a>
+        <a href="https://products.dreamsresources.com/products" target="_blank" rel="noopener">Services</a>
+        <a href="https://dreamsresources.com/join" target="_blank" rel="noopener">Join Our Team</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Dreams Business Resources. All rights reserved.</span>
+      <span>One Ecosystem. Endless Opportunities.</span>
+    </div>
+  </div>
+</footer>
+
+</div><!-- /frame -->
+
+<!-- ================= SCROLL TOGGLE ================= -->
+<div class="scroll-toggle">
+  <button id="scrollUp" aria-label="Scroll to top" title="Scroll to top">↑</button>
+  <button id="scrollDown" aria-label="Scroll to bottom" title="Scroll to bottom">↓</button>
+</div>
+
+<script>
+/* ---- Mobile menu ---- */
+const burger=document.getElementById('hamburger'),menu=document.getElementById('mobileMenu');
+burger.addEventListener('click',()=>{
+  const open=menu.classList.toggle('open');
+  burger.setAttribute('aria-expanded',open);
+});
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+
+/* ---- Scroll up/down toggle ---- */
+document.getElementById('scrollUp').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+document.getElementById('scrollDown').addEventListener('click',()=>window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'}));
+
+/* ---- Carousel ---- */
+(function(){
+  const track=document.getElementById('carTrack'),
+        slides=track.children.length,
+        dotsWrap=document.getElementById('carDots');
+  let i=0,timer;
+  for(let n=0;n<slides;n++){
+    const d=document.createElement('button');
+    d.className='car-dot'+(n===0?' active':'');
+    d.setAttribute('aria-label','Go to slide '+(n+1));
+    d.addEventListener('click',()=>{go(n);restart();});
+    dotsWrap.appendChild(d);
+  }
+  const dots=dotsWrap.children;
+  function go(n){
+    i=(n+slides)%slides;
+    track.style.transform='translateX(-'+(i*100)+'%)';
+    [...dots].forEach((d,x)=>d.classList.toggle('active',x===i));
+  }
+  function restart(){clearInterval(timer);timer=setInterval(()=>go(i+1),6000);}
+  document.getElementById('carPrev').addEventListener('click',()=>{go(i-1);restart();});
+  document.getElementById('carNext').addEventListener('click',()=>{go(i+1);restart();});
+  /* swipe support */
+  let sx=0;
+  track.addEventListener('touchstart',e=>{sx=e.touches[0].clientX;},{passive:true});
+  track.addEventListener('touchend',e=>{
+    const dx=e.changedTouches[0].clientX-sx;
+    if(Math.abs(dx)>45){go(i+(dx<0?1:-1));restart();}
+  },{passive:true});
+  const car=document.getElementById('carousel');
+  car.addEventListener('mouseenter',()=>clearInterval(timer));
+  car.addEventListener('mouseleave',restart);
+  restart();
+})();
+
+/* ---- FAQ accordion ---- */
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const item=q.parentElement,a=item.querySelector('.faq-a'),open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(o=>{
+      o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight=null;
+    });
+    if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
+  });
+});
+
+/* ---- Reveal on scroll ---- */
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+}),{threshold:.12});
+document.querySelectorAll('.reveal, .card, .hero-grid > *').forEach(el=>{
+  el.classList.add('reveal');io.observe(el);
+});
+
+/* ---- Animated counters ---- */
+const cio=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;
+  const el=e.target,end=+el.dataset.count,t0=performance.now(),dur=1600;
+  (function tick(t){
+    const p=Math.min((t-t0)/dur,1),eased=1-Math.pow(1-p,3);
+    el.textContent=Math.round(end*eased).toLocaleString();
+    if(p<1)requestAnimationFrame(tick);
+  })(t0);
+  cio.unobserve(el);
+}),{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+
+/* ---- Gauge sweep animation ---- */
+const arc=document.getElementById('gaugeArc');
+if(arc){
+  const target=20, full=251.2;
+  arc.style.strokeDashoffset=full;
+  const gio=new IntersectionObserver(es=>{
+    if(es[0].isIntersecting){
+      arc.style.transition='stroke-dashoffset 1.8s cubic-bezier(.4,0,.2,1)';
+      requestAnimationFrame(()=>arc.style.strokeDashoffset=target);
+      gio.disconnect();
+    }
+  },{threshold:.4});
+  gio.observe(arc);
+}
+</script>
+</body>
+</html>
