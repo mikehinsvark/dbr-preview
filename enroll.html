@@ -497,7 +497,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 34px;background:rgba(2,8,
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="sec-eyebrow">Simple Path</div>
-      <h2>Join free. Learn the system. <span>Build renewal income.</span></h2>
+      <h2>Enroll Free. Learn the System. <span>Build 100% Renewal Income.</span></h2>
       <p>DBR gives you tools, training, replicated resources, and expert support — so you don't have to build the machine from scratch.</p>
     </div>
     <div class="steps">
@@ -553,7 +553,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 34px;background:rgba(2,8,
       </div>
       <div class="faq-item">
         <button class="faq-q">Do I need a license?<span class="chev">+</span></button>
-        <div class="faq-a"><p>Many referral-style opportunities do not require a license. Some specialized product areas require licensed experts — which is exactly why the DBR ecosystem includes expert support. You refer; they handle the rest.</p></div>
+        <div class="faq-a"><p>The Dreams Business Resources system is structured so that you do not need additional licensing to begin building your agency under our qualified sponsors.<br><br><strong style="color:var(--white)">* While many products do not require a license, we recommend you obtain your life &amp; health license to maximize your income potential with our licensed products.</strong></p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">What does 100% renewal mean?<span class="chev">+</span></button>
@@ -561,7 +561,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 34px;background:rgba(2,8,
       </div>
       <div class="faq-item">
         <button class="faq-q">How does AI fit into the model?<span class="chev">+</span></button>
-        <div class="faq-a"><p>AI helps you research prospects, personalize outreach, organize follow-up, create content, and prepare presentations — so you move faster and more professionally than agents doing everything manually.</p></div>
+        <div class="faq-a"><p>AI helps you research prospects, personalize outreach, organize follow-up, create content, and prepare presentations — and build agentic AI automations that work while you sleep so nothing falls through the cracks.<br><br><strong style="color:var(--white)">AI won't replace you — but agents who learn to leverage AI will.</strong></p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Do I have to sell or close deals myself?<span class="chev">+</span></button>
@@ -605,7 +605,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 34px;background:rgba(2,8,
         <a href="https://aileveragelab.pro/" target="_blank" rel="noopener">AI Training</a>
       </div>
     </div>
-    <p class="fineprint">Income is not guaranteed. Commissions and renewals depend on qualified sales, active contracts, client retention, carrier/vendor rules, and DBR program terms. © 2026 Dreams Business Resources. All rights reserved.</p>
+    <p class="fineprint"><strong style="color:var(--gold)">Official Compensation &amp; Income Disclaimer:</strong> All figures and examples are provided for conceptual, illustrative, and training purposes only. No promise, guarantee, or representation of income is intended or implied. Actual results may vary significantly depending upon a variety of factors, including individual skill, time commitment, market conditions, and overall team performance. Dreams Business Resources does not guarantee any level of financial success. Compensation plans and product payout percentages are subject to change. © 2026 Dreams Business Resources. All rights reserved.</p>
   </div>
 </footer>
 
@@ -621,18 +621,4 @@ const burger=document.getElementById('hamburger'),menu=document.getElementById('
 burger.addEventListener('click',()=>{const open=menu.classList.toggle('open');burger.setAttribute('aria-expanded',open);});
 menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
 document.getElementById('scrollUp').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
-document.getElementById('scrollDown').addEventListener('click',()=>window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'}));
-document.querySelectorAll('.faq-q').forEach(q=>{
-  q.addEventListener('click',()=>{
-    const item=q.parentElement,a=item.querySelector('.faq-a'),open=item.classList.contains('open');
-    document.querySelectorAll('.faq-item.open').forEach(o=>{o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight=null;});
-    if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
-  });
-});
-const io=new IntersectionObserver(es=>es.forEach(e=>{
-  if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
-}),{threshold:.12});
-document.querySelectorAll('.reveal, .card, .hero-grid > *').forEach(el=>{el.classList.add('reveal');io.observe(el);});
-</script>
-</body>
-</html>
+document.getElementById('scrollDown').addEventListener('click',()=>window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'
