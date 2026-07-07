@@ -621,4 +621,22 @@ const burger=document.getElementById('hamburger'),menu=document.getElementById('
 burger.addEventListener('click',()=>{const open=menu.classList.toggle('open');burger.setAttribute('aria-expanded',open);});
 menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
 document.getElementById('scrollUp').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
-document.getElementById('scrollDown').addEventListener('click',()=>window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'
+document.getElementById('scrollDown').addEventListener('click',()=>window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'}));
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const item=q.parentElement,a=item.querySelector('.faq-a'),open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(o=>{o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight=null;});
+    if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
+  });
+});
+try{
+  const io=new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+  }),{threshold:0});
+  document.querySelectorAll('.reveal, .card, .hero-grid > *').forEach(el=>{el.classList.add('reveal');io.observe(el);});
+}catch(err){}
+/* Fail-safe: never leave content hidden */
+setTimeout(()=>{document.querySelectorAll('.reveal:not(.in)').forEach(el=>el.classList.add('in'));},1500);
+</script>
+</body>
+</html>

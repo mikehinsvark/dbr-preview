@@ -952,12 +952,16 @@ document.querySelectorAll('.faq-q').forEach(q=>{
 });
 
 /* ---- Reveal on scroll ---- */
-const io=new IntersectionObserver(es=>es.forEach(e=>{
-  if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
-}),{threshold:.12});
-document.querySelectorAll('.reveal, .card, .hero-grid > *').forEach(el=>{
-  el.classList.add('reveal');io.observe(el);
-});
+try{
+  const io=new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+  }),{threshold:0});
+  document.querySelectorAll('.reveal, .card, .hero-grid > *').forEach(el=>{
+    el.classList.add('reveal');io.observe(el);
+  });
+}catch(err){}
+/* Fail-safe: never leave content hidden */
+setTimeout(()=>{document.querySelectorAll('.reveal:not(.in)').forEach(el=>el.classList.add('in'));},1500);
 
 /* ---- Animated counters ---- */
 const cio=new IntersectionObserver(es=>es.forEach(e=>{
