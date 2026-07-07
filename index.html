@@ -263,6 +263,21 @@ header{
 .car-dot{width:9px;height:9px;border-radius:50%;background:rgba(170,180,195,.28);border:0;cursor:pointer;transition:.3s;padding:0}
 .car-dot.active{background:var(--cyan);box-shadow:0 0 10px var(--cyan);width:26px;border-radius:100px}
 
+/* ============ VIDEOS ============ */
+.video-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.video-card{padding:0;overflow:hidden}
+.video-card video{display:block;width:100%;aspect-ratio:16/9;background:#000;border-bottom:1px solid var(--line)}
+.video-body{padding:22px 24px 26px}
+.video-body h3{font-size:19px;font-weight:800;margin:10px 0 8px}
+.video-body p{color:var(--gray);font-size:14px;margin-bottom:16px}
+.video-points{list-style:none;margin-bottom:18px}
+.video-points li{display:flex;gap:9px;align-items:flex-start;padding:4px 0;font-size:13.5px;color:var(--white)}
+.video-points .vp-dot{width:7px;height:7px;border-radius:50%;flex:0 0 7px;margin-top:6px}
+.vp-green .vp-dot{background:var(--green);box-shadow:0 0 8px var(--green)}
+.vp-cyan .vp-dot{background:var(--cyan);box-shadow:0 0 8px var(--cyan)}
+.video-body .btn{padding:12px 20px;font-size:13.5px}
+@media(max-width:960px){.video-grid{grid-template-columns:1fr}}
+
 /* ============ SAMPLE REPORT / OPPORTUNITY AREAS ============ */
 .report-totals{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:34px}
 .total-card{text-align:center;padding:22px 16px;border-radius:16px;border:1px solid var(--line);
@@ -410,6 +425,7 @@ footer{border-top:1px solid var(--line);padding:52px 0 34px;background:rgba(2,8,
     <ul class="nav-links">
       <li><a href="#score">DREAMS Score</a></li>
       <li><a href="#solutions">Solutions</a></li>
+      <li><a href="#videos">Videos</a></li>
       <li><a href="#how">How It Works</a></li>
       <li><a href="#partners">Partners</a></li>
       <li><a href="#faq">FAQ</a></li>
@@ -424,6 +440,7 @@ footer{border-top:1px solid var(--line);padding:52px 0 34px;background:rgba(2,8,
   <div class="mobile-menu" id="mobileMenu">
     <a href="#score">DREAMS Score</a>
     <a href="#solutions">Solutions</a>
+    <a href="#videos">Videos</a>
     <a href="#how">How It Works</a>
     <a href="#partners">Partners</a>
     <a href="#faq">FAQ</a>
@@ -577,6 +594,18 @@ footer{border-top:1px solid var(--line);padding:52px 0 34px;background:rgba(2,8,
           <div class="slide">
             <div class="slide-inner">
               <div>
+                <span class="slide-tag t-gold">Tariff Refund Recovery · New</span>
+                <h3>Tariff Refunds: A $177B Opportunity for Importers</h3>
+                <p>Through Tax Prep Advocates and our Tariff Refund Agency partnership, importers and brokers can recover tariff overpayments — with strong refund applications and advance funding available for approved applicants.</p>
+                <a class="btn btn-gold" href="https://tariffrefundagency.com" target="_blank" rel="noopener">Check Refund Eligibility →</a>
+              </div>
+              <div class="slide-visual"><div class="slide-icon si-gold">🚢</div></div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="slide-inner">
+              <div>
                 <span class="slide-tag t-coral">Partner Opportunity</span>
                 <h3>One Relationship. Multiple Revenue Streams.</h3>
                 <p>Introduce business owners to DBR solutions while our experts handle the analysis, strategy, and implementation — and earn ongoing income.</p>
@@ -591,6 +620,51 @@ footer{border-top:1px solid var(--line);padding:52px 0 34px;background:rgba(2,8,
       <button class="car-nav car-prev" id="carPrev" aria-label="Previous slide">‹</button>
       <button class="car-nav car-next" id="carNext" aria-label="Next slide">›</button>
       <div class="car-dots" id="carDots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VIDEOS ================= -->
+<section id="videos" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-eyebrow">Watch &amp; Learn</div>
+      <h2>See It In Action — <span>Two Short Videos</span></h2>
+      <p>One for business owners who want to find hidden money. One for professionals who want to build income for life.</p>
+    </div>
+    <div class="video-grid">
+      <div class="card video-card reveal">
+        <video controls preload="metadata" poster="dbr-product-video-poster.jpg">
+          <source src="dbr-product-video.mp4" type="video/mp4">
+          Your browser does not support video playback.
+        </video>
+        <div class="video-body">
+          <span class="slide-tag t-cyan">For Business Owners</span>
+          <h3>Show Me The Money: The DREAMS Score in Action</h3>
+          <p>See exactly how the complimentary DREAMS Score uncovers hidden savings, tax credits, funding, and profit opportunities inside a real business.</p>
+          <ul class="video-points">
+            <li class="vp-cyan"><span class="vp-dot"></span>15-minute analysis, no sensitive financials required</li>
+            <li class="vp-cyan"><span class="vp-dot"></span>Six areas of savings and growth in one report</li>
+          </ul>
+          <a class="btn btn-ghost" href="https://showmethemoney.pro/" target="_blank" rel="noopener">Explore Show Me The Money →</a>
+        </div>
+      </div>
+      <div class="card green video-card reveal">
+        <video controls preload="metadata" poster="dbr-recruiting-video-poster.jpg">
+          <source src="dbr-recruiting-video.mp4" type="video/mp4">
+          Your browser does not support video playback.
+        </video>
+        <div class="video-body">
+          <span class="slide-tag t-green">For Referral Partners</span>
+          <h3>Renewals for Life: Income That Never Stops</h3>
+          <p>Most sales roles pay once. This model pays 100% lifetime renewals on group sales — you refer once and get paid every single month, compounding for the life of the contract. When you stop working, do you still get paid? We do.</p>
+          <ul class="video-points">
+            <li class="vp-green"><span class="vp-dot"></span>No cost. No license. No selling. No pitching.</li>
+            <li class="vp-green"><span class="vp-dot"></span>Our team does the heavy lifting — you simply refer</li>
+          </ul>
+          <a class="btn btn-primary" href="https://renewalsforlife.com/" target="_blank" rel="noopener">See the Income Model →</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -789,6 +863,7 @@ footer{border-top:1px solid var(--line);padding:52px 0 34px;background:rgba(2,8,
       <div class="foot-col">
         <h4>Ecosystem</h4>
         <a href="https://dreamsscores.com/?refid=AA0233" target="_blank" rel="noopener">Get Your Score</a>
+        <a href="https://showmethemoney.pro" target="_blank" rel="noopener">Show Me The Money</a>
         <a href="https://renewalsforlife.com" target="_blank" rel="noopener">Renewals For Life</a>
         <a href="https://products.dreamsresources.com/products" target="_blank" rel="noopener">Services</a>
         <a href="https://dreamsresources.com/join" target="_blank" rel="noopener">Join Our Team</a>
